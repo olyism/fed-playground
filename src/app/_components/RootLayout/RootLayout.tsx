@@ -12,7 +12,11 @@ interface Props {
 
 const RootLayout: FC<Props> = ({ children }) => (
   <html lang="en">
-    <body>{children}</body>
+    <body>
+      <main className="flex flex-col min-h-screen items-center justify-center">
+        {children}
+      </main>
+    </body>
   </html>
 )
 
