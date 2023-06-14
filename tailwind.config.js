@@ -9,7 +9,7 @@ module.exports = {
     colors: {
       'white': '#ffffff',
       'alias-base': 'rgb(var(--charcoal-700)) / <alpha-value>',
-    }
+    },
   },
   plugins: [],
 }

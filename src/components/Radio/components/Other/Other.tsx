@@ -7,7 +7,6 @@ import styles from './Other.module.css'
 
 enum Mode {
   Pristine = 'Pristine',
-  Dirty = 'Dirty',
   Focus = 'Focus',
   IsValid = 'IsValid',
 }
@@ -42,13 +41,13 @@ const Other: FC<Props> = ({ name, checked = false, onSubmit = undefined }) => {
   switch (mode) {
     case Mode.Pristine:
       return (
-        <button className="block w-full" onClick={() => setMode(Mode.Focus)} type="button">
+        <button className={styles['other__button-wrapper']} onClick={() => setMode(Mode.Focus)} type="button">
           <Radio.Input name={name} label="Other" checked={checked} value={''} />
         </button>
       )
     case Mode.IsValid:
       return (
-        <button className="block w-full" onClick={() => setMode(Mode.Focus)} type="button">
+        <button className={styles['other__button-wrapper']} onClick={() => setMode(Mode.Focus)} type="button">
           <Radio.Input name={name} label={`Other: ${value}`} checked={checked} value={value}/>
         </button>
       )

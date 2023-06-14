@@ -3,6 +3,7 @@
 import type { FC } from 'react'
 import { useForm, Controller } from 'react-hook-form'
 import Container, { Variant } from '@/components/Container'
+import Message from '@/components/Message'
 import Radio from '@/components/Radio'
 
 type FormValues = {
@@ -30,7 +31,9 @@ const RadioInputPage: FC = () => {
                 <li><Radio.Input name={name} checked={value === "reduce cost"} onChange={onChange} value="reduce cost" /></li>
                 <li><Radio.Other name={name} checked={value.startsWith('Other:')} onSubmit={onChange} /></li>
               </ul>
-              {value}
+              <div className="my-8 w-full">
+                <Message message={`The form value is: ${value}`} />
+              </div>
             </>
           )}
         />
