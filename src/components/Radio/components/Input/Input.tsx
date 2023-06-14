@@ -2,7 +2,7 @@ import type { FC } from 'react'
 import cn from 'classnames'
 import capitalizeFirstLetter from '@/lib/capitalizeFirstLetter'
 import Radio from './components/Radio'
-import styles from './RadioInput.module.css'
+import styles from './Input.module.css'
 
 interface Props {
   name: string
@@ -15,7 +15,7 @@ interface Props {
   disabled?: boolean
 }
 
-const RadioInput: FC<Props> = ({
+const Input: FC<Props> = ({
   name,
   value,
   label = undefined,
@@ -49,4 +49,4 @@ const RadioInput: FC<Props> = ({
   )
 }
 
-export default RadioInput
+export default Input

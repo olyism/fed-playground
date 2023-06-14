@@ -1,6 +1,5 @@
 import { type FC, type FormEvent, useState } from 'react'
-import { useForm } from 'react-hook-form'
-import RadioInput from '../RadioInput/RadioInput'
+import Radio from '@/components/Radio'
 
 enum Mode {
   Pristine = 'Pristine',
@@ -9,25 +8,15 @@ enum Mode {
   IsValid = 'IsValid',
 }
 
-type FormValues = {
-  value: string
-}
-
 interface Props {
   name: string
   checked?: boolean
   onSubmit?: (value: string) => void
 }
 
-const OtherInput: FC<Props> = ({ name, checked = false, onSubmit = undefined }) => {
+const Other: FC<Props> = ({ name, checked = false, onSubmit = undefined }) => {
   const [ mode, setMode ] = useState(Mode.Pristine)
   const [ value, setValue ] = useState<string>('')
-
-  const { handleSubmit } = useForm<FormValues>()
-
-  // const submitHandler = onSubmit ? 
-  //   handleSubmit(() => onSubmit(value)) 
-  //   : undefined
 
   const submitHandler = (e: FormEvent) => {
     e.preventDefault()
@@ -45,14 +34,14 @@ const OtherInput: FC<Props> = ({ name, checked = false, onSubmit = undefined }) 
   switch (mode) {
     case Mode.Pristine:
       return (
-        <button onClick={() => setMode(Mode.Focus)} type="button">
-          <RadioInput name={name} checked={checked} value={''} />
+        <button className="block w-full" onClick={() => setMode(Mode.Focus)} type="button">
+          <Radio.Input name={name} label="Other" checked={checked} value={''} />
         </button>
       )
     case Mode.IsValid:
       return (
-        <button onClick={() => setMode(Mode.Focus)} type="button">
-          <RadioInput name={name} checked={checked} value={value}/>
+        <button className="block w-full" onClick={() => setMode(Mode.Focus)} type="button">
+          <Radio.Input name={name} label={`Other: ${value}`} checked={checked} value={value}/>
         </button>
       )
     default:
@@ -72,4 +61,4 @@ const OtherInput: FC<Props> = ({ name, checked = false, onSubmit = undefined }) 
   }
 }
 
-export default OtherInput
+export default Other
