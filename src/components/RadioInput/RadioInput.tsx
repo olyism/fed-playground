@@ -1,4 +1,5 @@
 import type { FC } from 'react'
+import cn from 'classnames'
 import { v4 as uuidv4 } from 'uuid'
 import capitalizeFirstLetter from '@/lib/capitalizeFirstLetter'
 import Radio from './components/Radio'
@@ -24,16 +25,20 @@ const RadioInput: FC<Props> = ({
   value = value ?? name
 
   return (
-    <div className={styles['radio-input']}>
+    <label className={cn(
+      styles['radio-input'],
+      checked && styles['radio-input--checked']
+    )}>
       <input
         name={name}
         type="radio"
         id={id}
         checked={checked}
+        className={styles['radio-input__native-radio']}
       />
       <Radio checked={checked} />
-      <label htmlFor={id}>{label}</label>
-    </div>
+      {label}
+    </label>
   )
 }
 

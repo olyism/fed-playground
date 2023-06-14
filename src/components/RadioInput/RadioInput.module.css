@@ -1,3 +1,21 @@
 .radio-input {
-  color: red;
+  background-color: var(--base-0);
+  border-radius: 4px;
+  box-shadow: var(--shadow-depth-150);
+  display: flex;
+  font-size: 14px;
+  font-weight: 600;
+  gap: 10px;
+  line-height: 20px;
+  padding: 14px 20px;
+  transition: box-shadow var(--trasition-speed);
+}
+
+.radio-input:not(.radio-input--checked):hover {
+  box-shadow: var(--shadow-depth-150-hover);
+  cursor: pointer;
+}
+
+.radio-input__native-radio {
+  display: none;
 }
