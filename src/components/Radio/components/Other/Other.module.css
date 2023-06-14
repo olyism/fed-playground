@@ -5,6 +5,7 @@
 }
 
 .other__input {
+  background-color: transparent;
   font-weight: normal;
   outline: none;
   width: 100%;

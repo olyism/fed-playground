@@ -13,14 +13,14 @@
     box-shadow var(--transition-speed-normal);
 }
 
-.bezel--focused,
-input[type="radio"]:focus-visible + .bezel {
-  box-shadow: var(--shadow-depth-150), var(--shadow-depth-150-focus);
-}
-
 .bezel--checked {
   background-color: var(--purple-100);
   box-shadow: var(--inner-shadow-depth-150);
+}
+
+.bezel--focused,
+input[type="radio"]:focus-visible + .bezel {
+  box-shadow: var(--shadow-depth-150), var(--shadow-depth-150-focus);
 }
 
 .bezel:not(.bezel--checked):not(.bezel--focused):hover {

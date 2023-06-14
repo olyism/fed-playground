@@ -20,12 +20,9 @@ interface Props {
 const Other: FC<Props> = ({ name, checked = false, onSubmit = undefined }) => {
   const [ mode, setMode ] = useState<Mode>(Mode.Pristine)
   const [ value, setValue ] = useState<string>('')
-  const [ focused, setFocused ] = useState<boolean>(false)
 
   const submitHandler = (e: FormEvent) => {
     e.preventDefault()
-
-    setFocused(false)
 
     if (!onSubmit) return
 
@@ -54,13 +51,13 @@ const Other: FC<Props> = ({ name, checked = false, onSubmit = undefined }) => {
     default:
       return (
         <form onSubmit={submitHandler}>
-          <Bezel checked={checked} focused={focused}>
+          <Bezel checked={checked} focused={mode === Mode.Focus}>
             <input
               name={name}
               type="text"
               value={value}
               onBlur={submitHandler}
-              onFocus={() => setFocused(true)}
+              onFocus={() => setMode(Mode.Focus)}
               onChange={(e) => setValue(e.target.value)}
               placeholder="Other"
               className={styles['other__input']}
