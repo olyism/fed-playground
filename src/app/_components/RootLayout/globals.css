@@ -79,7 +79,23 @@
       0px 2px 2px 0px rgba(0, 0, 0, 0.05),
       0px 1px 0px 0px rgba(0, 0, 0, 0.09),
       0px 0px 0px 1px rgba(0, 0, 0, 0.18);
-    
-    --transition-speed: 0.5;
+    --shadow-depth-150-focus:
+      0px 0px 0px 3px rgba(255, 255, 255, 1),
+      0px 0px 0px 5px rgba(20, 204, 128, 1),      
+      0px 4px 4px 0px rgba(0, 0, 0, 0.01),
+      0px 3px 3px 0px rgba(0, 0, 0, 0.02),
+      0px 2px 2px 0px rgba(0, 0, 0, 0.04),
+      0px 1px 0px 0px rgba(0, 0, 0, 0.09),
+      0px 0px 0px 1px rgba(0, 0, 0, 0.15);
+    --inner-shadow-depth-150:
+      0px 4px 4px 0px rgba(0, 0, 0, 0.01) inset,
+      0px 2px 3px 0px rgba(0, 0, 0, 0.02) inset,    
+      0px 2px 2px 0px rgba(0, 0, 0, 0.04) inset,    
+      0px -1px 0px 0px rgba(0, 0, 0, 0.09),    
+      0px 0px 0px 1px rgba(0, 0, 0, 0.15);
+
+    --transition-speed-fast: 0.2s;
+    --transition-speed-normal: 0.4s;
+    --transition-speed-slow: 0.8s;
   }
 }

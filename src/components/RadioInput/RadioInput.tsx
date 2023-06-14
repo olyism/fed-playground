@@ -1,43 +1,44 @@
 import type { FC } from 'react'
 import cn from 'classnames'
-import { v4 as uuidv4 } from 'uuid'
 import capitalizeFirstLetter from '@/lib/capitalizeFirstLetter'
 import Radio from './components/Radio'
 import styles from './RadioInput.module.css'
 
 interface Props {
   name: string
+  value: string
   label?: string
-  value?: string
-  checked?: boolean
   id?: string
+  checked?: boolean
+  onChange: (value: string) => void
 }
 
 const RadioInput: FC<Props> = ({
   name,
+  value,
   label = undefined,
-  value = undefined,
-  checked = false,
   id = undefined,
+  checked = false,
+  onChange
 }) => {
-  label = label ?? capitalizeFirstLetter(name)
-  id = id ?? uuidv4()
-  value = value ?? name
+  label = label ?? capitalizeFirstLetter(value)
+  id = id ?? value
 
   return (
-    <label className={cn(
-      styles['radio-input'],
-      checked && styles['radio-input--checked']
-    )}>
+    <label>
       <input
         name={name}
         type="radio"
-        id={id}
+        value={value}
         checked={checked}
-        className={styles['radio-input__native-radio']}
+        id={id}
+        className={cn('sr-only', styles['radio-input__native-radio'])}
+        onChange={() => onChange(value)}
       />
-      <Radio checked={checked} />
-      {label}
+      <div className={cn(styles['radio-input'], checked && styles['radio-input--checked'])}>
+        <Radio checked={checked} />
+        {label}
+      </div>
     </label>
   )
 }

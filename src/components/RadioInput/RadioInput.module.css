@@ -8,7 +8,14 @@
   gap: 10px;
   line-height: 20px;
   padding: 14px 20px;
-  transition: box-shadow var(--trasition-speed);
+  transition: 
+    background-color var(--transition-speed-normal),
+    box-shadow var(--transition-speed-normal);
+}
+
+.radio-input--checked {
+  background-color: var(--purple-100);
+  box-shadow: var(--inner-shadow-depth-150);
 }
 
 .radio-input:not(.radio-input--checked):hover {
@@ -16,6 +23,6 @@
   cursor: pointer;
 }
 
-.radio-input__native-radio {
-  display: none;
+.radio-input__native-radio:focus-visible + .radio-input {
+  box-shadow: var(--shadow-depth-150), var(--shadow-depth-150-focus);
 }

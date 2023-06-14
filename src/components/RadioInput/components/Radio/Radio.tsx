@@ -2,10 +2,10 @@ import type { FC } from 'react'
 import styles from './Radio.module.css'
 
 interface Props {
-  checked: boolean
+  checked?: boolean
 }
 
-const Radio: FC<Props> = ({ checked }) => {
+const Radio: FC<Props> = ({ checked = false }) => {
   const circleClasses = `
     ${styles['radio__circle']}
     ${checked ? styles['radio__circle--checked'] : styles['radio__circle--unchecked']}
