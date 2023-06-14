@@ -1,0 +1,9 @@
+.input__label {
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.input__label--checked {
+  color: var(--purple-600);
+}

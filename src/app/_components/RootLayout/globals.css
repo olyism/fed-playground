@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --base-0: #FFFFFF;
+    --base-1000: #000000;
+    --gray-100: #F8F8F8;
+    --gray-200: #F5F5F5;
+    --gray-300: #EEEEEE;
+    --gray-400: #E5E5E5;
+    --gray-500: #DDDDDD;
+    --gray-600: #BBBBBB;
+    --gray-700: #AAAAAA;
+    --gray-800: #8E8E8E;
+    --gray-900: #888888;
+    --charcoal-300: #767676;
+    --charcoal-400: #555555;
+    --charcoal-500: #4F4F4F;
+    --charcoal-600: #444444;
+    --charcoal-700: #333333;
+    --charcoal-800: #222222;
+    --charcoal-900: #111111;
+    --slate-100: #F9FAFB;
+    --slate-500: #C2CACE;
+    --slate-800: #202632;
+    --slate-900: #151921;
+    --lime-200: #BEEAD8;
+    --lime-500: #14CC80;
+    --lime-700: #00BB64;
+    --olive-500: #3D9970;
+    --olive-700: #078573;
+    --olive-800: #0E7868;
+    --aqua-100: #DDFFFA;
+    --aqua-500: #6AF0DB;
+    --aqua-600: #39CCCC;
+    --aqua-800: #238072;
+    --green-100: #FAFDFA;
+    --green-150: #F0FDF2;
+    --green-200: #E2FBE6;
+    --green-400: #2ECC40;
+    --green-500: #00BE13;
+    --green-700: #00A110;
+    --red-100: #FDF5F5;
+    --red-300: #FFCCDD;
+    --red-500: #F83F23;
+    --red-600: #EB130F;
+    --red-700: #DB260A;
+    --orange-100: #FFF8E7;
+    --orange-500: #FFBA11;
+    --orange-700: #FF851B;
+    --yellow-500: #FFDC00;
+    --blue-100: #EFF9FF;
+    --blue-200: #BFEDFF;
+    --blue-400: #7FDBFF;
+    --blue-600: #337AB7;
+    --blue-700: #0A568D;
+    --purple-100: #F1EFFF;
+    --purple-300: #A195EF;
+    --purple-600: #4B19D5;
+    --purple-700: #2D2081;
+    --pink-100: #FFEDF9;
+    --pink-400: #F198D3;
+    --pink-700: #921F6B;
+    --pink-800: #85144B;
+    --parsnip-100: #FAF9F4;
+    --parsnip-400: #DCD7C8;
+
+    --shadow-depth-150:
+      0px 4px 4px 0px rgba(0, 0, 0, 0.01),
+      0px 3px 3px 0px rgba(0, 0, 0, 0.02),    
+      0px 2px 2px 0px rgba(0, 0, 0, 0.04),    
+      0px 1px 0px 0px rgba(0, 0, 0, 0.09),    
+      0px 0px 0px 1px rgba(0, 0, 0, 0.15);
+    --shadow-depth-150-hover:
+      0px 6px 6px 1px rgba(0, 0, 0, 0.02),
+      0px 3px 3px 0px rgba(0, 0, 0, 0.05),
+      0px 2px 2px 0px rgba(0, 0, 0, 0.05),
+      0px 1px 0px 0px rgba(0, 0, 0, 0.09),
+      0px 0px 0px 1px rgba(0, 0, 0, 0.18);
+    --shadow-depth-150-focus:
+      0px 0px 0px 3px rgba(255, 255, 255, 1),
+      0px 0px 0px 5px rgba(20, 204, 128, 1),      
+      0px 4px 4px 0px rgba(0, 0, 0, 0.01),
+      0px 3px 3px 0px rgba(0, 0, 0, 0.02),
+      0px 2px 2px 0px rgba(0, 0, 0, 0.04),
+      0px 1px 0px 0px rgba(0, 0, 0, 0.09),
+      0px 0px 0px 1px rgba(0, 0, 0, 0.15);
+    --inner-shadow-depth-150:
+      0px 4px 4px 0px rgba(0, 0, 0, 0.01) inset,
+      0px 2px 3px 0px rgba(0, 0, 0, 0.02) inset,    
+      0px 2px 2px 0px rgba(0, 0, 0, 0.04) inset,    
+      0px -1px 0px 0px rgba(0, 0, 0, 0.09),    
+      0px 0px 0px 1px rgba(0, 0, 0, 0.15);
+
+    --transition-speed-fast: 0.2s;
+    --transition-speed-normal: 0.4s;
+    --transition-speed-slow: 0.8s;
+  }
+}

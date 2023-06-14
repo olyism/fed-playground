@@ -1,0 +1,29 @@
+.bezel {
+  background-color: var(--base-0);
+  border-radius: 4px;
+  box-shadow: var(--shadow-depth-150);
+  display: flex;
+  font-size: 14px;
+  font-weight: 600;
+  gap: 10px;
+  line-height: 20px;
+  padding: 14px 16px 14px 16px;
+  transition: 
+    background-color var(--transition-speed-normal),
+    box-shadow var(--transition-speed-normal);
+}
+
+.bezel--focused,
+input[type="radio"]:focus-visible + .bezel {
+  box-shadow: var(--shadow-depth-150), var(--shadow-depth-150-focus);
+}
+
+.bezel--checked {
+  background-color: var(--purple-100);
+  box-shadow: var(--inner-shadow-depth-150);
+}
+
+.bezel:not(.bezel--checked):not(.bezel--focused):hover {
+  box-shadow: var(--shadow-depth-150-hover);
+  cursor: pointer;
+}
