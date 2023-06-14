@@ -1,7 +1,7 @@
 import type { FC, ReactNode } from 'react'
 import cn from 'classnames'
 
-enum Variant {
+export enum Variant {
   Page = 'Page',
   Inner = 'Inner',
 }
@@ -13,7 +13,7 @@ interface Props {
 
 const Container: FC<Props> = ({ children = undefined, variant = Variant.Page }) => (
   <div className={cn(
-    'mx-auto',
+    ['mx-auto', 'px-4', 'w-full'],
     variant === Variant.Inner && ['max-w-prose', 'flex', 'flex-col', 'items-center'],
     variant === Variant.Page && 'max-w-4xl',
   )}>
