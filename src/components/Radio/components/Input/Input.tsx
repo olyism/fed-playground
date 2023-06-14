@@ -1,7 +1,7 @@
 import type { FC } from 'react'
 import cn from 'classnames'
 import capitalizeFirstLetter from '@/lib/capitalizeFirstLetter'
-import Radio from './components/Radio'
+import Bezel from '../Bezel'
 import styles from './Input.module.css'
 
 interface Props {
@@ -39,12 +39,16 @@ const Input: FC<Props> = ({
         onChange={onChange ? () => onChange(value) : undefined}
         readOnly={!onChange || readOnly}
         disabled={disabled}
-        className={cn('sr-only', styles['radio-input__native-radio'])}
+        className="sr-only"
       />
-      <div className={cn(styles['radio-input'], checked && styles['radio-input--checked'])}>
-        <Radio checked={checked} />
-        {label}
-      </div>
+      <Bezel checked={checked}>
+        <span className={cn(
+          styles['input__label'],
+          checked && styles['input__label--checked']
+        )}>
+          {label}
+        </span>
+      </Bezel>
     </label>
   )
 }

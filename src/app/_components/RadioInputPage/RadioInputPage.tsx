@@ -24,13 +24,13 @@ const RadioInputPage: FC = () => {
           control={control}
           render={({ field: { onChange, value, name }}) => (
             <>
-              {value}
               <ul className="grid grid-cols-2 gap-4 w-full">
                 <li><Radio.Input name={name} checked={value === "safety"} onChange={onChange} value="safety" /></li>
                 <li><Radio.Input name={name} checked={value === "performance"} onChange={onChange} value="performance" /></li>
                 <li><Radio.Input name={name} checked={value === "reduce cost"} onChange={onChange} value="reduce cost" /></li>
                 <li><Radio.Other name={name} checked={value.startsWith('Other:')} onSubmit={onChange} /></li>
               </ul>
+              {value}
             </>
           )}
         />

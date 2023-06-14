@@ -1,8 +1,8 @@
-.radio {
+.check {
   padding: 1px;
 }
 
-.radio__circle {
+.check__mark {
   border-style: solid;
   border-width: 1px;
   border: 1px solid var(--gray-500);
@@ -13,12 +13,12 @@
   width: 18px;
 }
 
-.radio__circle--unchecked {
+.check__mark--unchecked {
   background-color: var(--base-0);
   border-color: var(--gray-500);
 }
 
-.radio__circle--checked {
+.check__mark--checked {
   background-color: var(--purple-600);
   border-color: var(--purple-600);
 }

@@ -1,0 +1,19 @@
+.other__input {
+  outline: none;
+  width: 100%;
+}
+
+.other__submit {
+  border-radius: 4px;
+  box-shadow: var(--shadow-depth-150);
+  font-size: 12px;
+  height: 20px;
+  line-height: 20px;
+  padding-left: 4px;
+  padding-right: 4px;
+  text-transform: uppercase;
+}
+
+.other__submit:hover {
+  box-shadow: var(--shadow-depth-150-hover);
+}
