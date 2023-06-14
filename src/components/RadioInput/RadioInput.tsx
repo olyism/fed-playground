@@ -10,7 +10,9 @@ interface Props {
   label?: string
   id?: string
   checked?: boolean
-  onChange: (value: string) => void
+  onChange?: (value: string) => void
+  readOnly?: boolean
+  disabled?: boolean
 }
 
 const RadioInput: FC<Props> = ({
@@ -19,7 +21,9 @@ const RadioInput: FC<Props> = ({
   label = undefined,
   id = undefined,
   checked = false,
-  onChange
+  onChange = undefined,
+  readOnly = undefined,
+  disabled = undefined,
 }) => {
   label = label ?? capitalizeFirstLetter(value)
   id = id ?? value
@@ -30,10 +34,12 @@ const RadioInput: FC<Props> = ({
         name={name}
         type="radio"
         value={value}
-        checked={checked}
         id={id}
+        checked={checked}
+        onChange={onChange ? () => onChange(value) : undefined}
+        readOnly={!onChange || readOnly}
+        disabled={disabled}
         className={cn('sr-only', styles['radio-input__native-radio'])}
-        onChange={() => onChange(value)}
       />
       <div className={cn(styles['radio-input'], checked && styles['radio-input--checked'])}>
         <Radio checked={checked} />
