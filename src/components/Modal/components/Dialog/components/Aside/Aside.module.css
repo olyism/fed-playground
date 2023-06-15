@@ -1,0 +1,14 @@
+.aside {
+  background-color: var(--purple-100);
+  background-image: url('./bg.svg');
+  background-position: center;
+  background-size: cover;
+  padding: 16px;
+}
+
+@media (min-width: 768px) {
+  .aside {
+    overflow-y: auto;
+    padding: 32px;
+  }
+}

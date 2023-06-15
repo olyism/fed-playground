@@ -1,5 +1,5 @@
 import type { FC } from 'react'
-import Dialog from './_components/Dialog'
+import Dialog from './components/Dialog'
 import styles from './Modal.module.css'
 
 const Modal: FC = () => (
