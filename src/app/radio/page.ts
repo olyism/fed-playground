@@ -1,1 +1,1 @@
-export { default } from '@/app/_components/RadioInputPage'
+export { default } from './_components/RadioInputPage'
