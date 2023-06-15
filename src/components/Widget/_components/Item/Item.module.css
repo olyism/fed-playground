@@ -1,0 +1,22 @@
+.item {
+  display: flex;
+  gap: 12px;
+}
+
+.item__avatar {
+  flex: none;
+}
+
+.item__content {
+  flex-grow: 1;
+}
+
+.item__heading {
+  font-weight: 500;
+}
+
+.item__divider {
+  border-color: var(--gray-500);
+  margin-bottom: 16px;
+  margin-top: 16px;
+}

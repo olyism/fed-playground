@@ -17,6 +17,7 @@ export type AvatarProps = {
   size?: AvatarSize
   isCircle?: boolean
   children?: ReactNode
+  className?: string
 }
 
 const getSizeClassName = (size: AvatarSize): string => {
@@ -38,13 +39,15 @@ const Avatar: FC<AvatarProps> = ({
   color = undefined,
   size = AvatarSize.Base,
   isCircle = false,
-  children = <Image alt="Buildkite" height="150" src={fallbackImg} width="150" />
+  children = <Image alt="Buildkite" height="150" src={fallbackImg} width="150" />,
+  className = undefined
 }) => (
   <div
     className={cn(
       styles.avatar,
       getSizeClassName(size),
-      isCircle && styles['avatar--is-circle']
+      isCircle && styles['avatar--is-circle'],
+      className
     )}
     style={color ? { backgroundColor: color } : undefined}
   >

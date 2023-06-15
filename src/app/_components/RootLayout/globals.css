@@ -87,6 +87,9 @@
       0px 2px 2px 0px rgba(0, 0, 0, 0.04),
       0px 1px 0px 0px rgba(0, 0, 0, 0.09),
       0px 0px 0px 1px rgba(0, 0, 0, 0.15);
+    --shadow-depth-200:
+      0px 3px 0px 1px rgba(0, 0, 0, 0.05),
+      0px 0px 0px 1px rgba(0, 0, 0, 0.1);
     --inner-shadow-depth-150:
       0px 4px 4px 0px rgba(0, 0, 0, 0.01) inset,
       0px 2px 3px 0px rgba(0, 0, 0, 0.02) inset,    
