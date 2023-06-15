@@ -97,5 +97,7 @@
     --transition-speed-fast: 0.2s;
     --transition-speed-normal: 0.4s;
     --transition-speed-slow: 0.8s;
+
+    --z-index-modal: 30;
   }
 }
