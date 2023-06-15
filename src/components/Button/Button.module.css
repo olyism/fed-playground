@@ -1,0 +1,18 @@
+.button {
+  background-color: var(--purple-600);
+  border-radius: 24px;
+  color: var(--base-0);
+  font-weight: 600;
+  line-height: 24px;
+  padding: 12px 44px;
+  transition: background-color var(--transition-speed-normal);
+}
+
+.button:not(.button[disabled]):hover {
+  background-color: var(--purple-700);
+}
+
+.button[disabled] {
+  cursor: not-allowed;
+  opacity: 25%;
+}

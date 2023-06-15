@@ -8,6 +8,7 @@ const HomePage: FC = () => (
       <nav className="text-center">
         <ul>
           <li><Link href="/avatar">Avatar</Link></li>
+          <li><Link href="/button">Button</Link></li>
           <li><Link href="/radio">Radio</Link></li>
           <li><Link href="/widget">Widget</Link></li>
           <li><Link href="/modal">Modal</Link></li>
