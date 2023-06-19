@@ -100,6 +100,7 @@
     --transition-speed-fast: 0.2s;
     --transition-speed-normal: 0.4s;
     --transition-speed-slow: 0.8s;
+    --transition-speed-slower: 1.6s;
 
     --z-index-modal: 30;
   }

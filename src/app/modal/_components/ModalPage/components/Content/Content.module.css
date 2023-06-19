@@ -4,3 +4,9 @@
   line-height: 34px;
   margin-bottom: 16px;
 }
+
+.content__paragraph {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}

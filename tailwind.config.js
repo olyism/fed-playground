@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     colors: {
       'white': '#ffffff',
-      'alias-base': 'rgb(var(--charcoal-700)) / <alpha-value>',
+      'alias-base': 'var(--charcoal-700)',
     },
   },
   plugins: [],

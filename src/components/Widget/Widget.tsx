@@ -14,7 +14,7 @@ const Widget: FC<Props> = ({ heading, items }) => {
   return (
     <>
       {heading && <div className={styles.widget__heading}>{heading}</div>}
-      <Card>
+      <Card className={styles.widget}>
         <ul>
           {items.map((item, i) => {
             const { heading, children, avatar } = item

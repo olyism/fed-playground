@@ -14,9 +14,14 @@ const Content: FC = () => {
   return step > 2 ? (
     <div>
       <h1 className={styles['content__heading']}>You're all set!</h1>
-      <p>Up next, let's create your first project.</p>
-      <p>You'll have it up and running in 5 minutes.</p>
-      <Button>Create your project</Button>
+      <p className={styles['content__paragraph']}>Up next, let's create your first project.</p>
+      <p className={styles['content__paragraph']}>You'll have it up and running in 5 minutes.</p>
+      <Button
+        className="mt-6"
+        emojis={['✨', '👷', '💚']}
+      >
+        Create your project
+      </Button>
     </div>
   ) : (
     <div>
