@@ -3,10 +3,8 @@
 }
 
 .check__mark {
-  border-style: solid;
-  border-width: 1px;
   border: 1px solid var(--gray-500);
-  border-radius: 100%;
+  border-radius: 4px;
   height: 18px;
   padding: 4px;
   transition: border-color var(--transition-speed-normal);
@@ -21,4 +19,8 @@
 .check__mark--checked {
   background-color: var(--purple-600);
   border-color: var(--purple-600);
+}
+
+.check__mark--radio {
+  border-radius: 100%;
 }

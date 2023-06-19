@@ -8,9 +8,9 @@ import Aside from './components/Aside'
 import ModalContext, { defaultValue } from './ModalContext'
 
 export type FormData = {
-  goals: string | undefined,
+  goals: string[],
   role: string | undefined,
-  tools: string | undefined,
+  tools: string[],
 }
 
 const ModalPage: FC = () => {

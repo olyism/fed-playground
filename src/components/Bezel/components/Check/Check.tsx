@@ -1,16 +1,19 @@
 import type { FC } from 'react'
 import cn from 'classnames'
+import { SwitchType } from '@/components/SwitchBase'
 import styles from './Check.module.css'
 
 interface Props {
   checked?: boolean
+  type: SwitchType
 }
 
-const Check: FC<Props> = ({ checked = false }) => (
+const Check: FC<Props> = ({ checked = false, type }) => (
   <div className={styles.check}>
     <div className={cn(
       styles['check__mark'],
-      checked ? styles['check__mark--checked'] : styles['check__mark--unchecked']
+      checked ? styles['check__mark--checked'] : styles['check__mark--unchecked'],
+      type === SwitchType.Radio && styles['check__mark--radio']
     )}>
       {checked && (
         <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
