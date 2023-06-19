@@ -9,7 +9,7 @@ import Steps from './components/Steps'
 import styles from './Content.module.css'
 
 const Content: FC = () => {
-  const { step } = useContext(ModalContext)
+  const { step, onLaunch } = useContext(ModalContext)
 
   return step > 2 ? (
     <div>
@@ -19,6 +19,7 @@ const Content: FC = () => {
       <Button
         className="mt-6"
         emojis={['✨', '👷', '💚']}
+        onClick={() => onLaunch()}
       >
         Create your project
       </Button>

@@ -9,6 +9,7 @@ export type ModalContextType = {
   formData: FormData,
   onSetStep: (step: number) => void,
   onChange: (data: FormData) => void,
+  onLaunch: () => void,
 }
 
 export const defaultValue: ModalContextType = {
@@ -16,6 +17,7 @@ export const defaultValue: ModalContextType = {
   formData: defaultFormData,
   onSetStep: () => {},
   onChange: () => {},
+  onLaunch: () => {},
 }
 
 const ModalContext = createContext<ModalContextType>(defaultValue)
