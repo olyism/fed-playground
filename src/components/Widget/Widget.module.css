@@ -1,3 +1,5 @@
-/* .widget__li:not(.widget__li:first-child) {
-  margin-top: 16px;
-} */
+.widget__heading {
+  font-size: 18px;
+  line-height: 26px;
+  margin-bottom: 8px;
+}

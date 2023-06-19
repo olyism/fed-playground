@@ -5,7 +5,7 @@ import styles from './Item.module.css'
 export type WidgetItemProps = {
   heading: string,
   avatar?: AvatarProps,
-  children: ReactNode,
+  children: ReactNode | string,
   last?: boolean
 }
 

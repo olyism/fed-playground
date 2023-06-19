@@ -1,1 +1,1 @@
-export { default } from './ModalPage'
+export { default, type FormData } from './ModalPage'

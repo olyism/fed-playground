@@ -1,8 +1,12 @@
-import type { FC } from 'react'
+import type { FC, ReactNode } from 'react'
 import styles from './Aside.module.css'
 
-const Aside: FC = () => (
-  <aside className={styles.aside}>Aside</aside>
+interface Props {
+  aside?: ReactNode
+}
+
+const Aside: FC<Props> = ({ aside = undefined }) => (
+  <aside className={styles.aside}>{aside}</aside>
 )
 
 export default Aside

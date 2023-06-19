@@ -4,26 +4,30 @@ import Item, { type WidgetItemProps } from './_components/Item'
 import styles from './Widget.module.css'
 
 interface Props {
+  heading?: string
   items: WidgetItemProps[]
 }
 
-const Widget: FC<Props> = ({ items }) => {
+const Widget: FC<Props> = ({ heading, items }) => {
   const { length } = items
 
   return (
-    <Card>
-      <ul>
-        {items.map((item, i) => {
-          const { heading, children, avatar } = item
+    <>
+      {heading && <div className={styles.widget__heading}>{heading}</div>}
+      <Card>
+        <ul>
+          {items.map((item, i) => {
+            const { heading, children, avatar } = item
 
-          return (
-            <li className={styles['widget__li']} key={`${i} ${heading}`}>
-              <Item heading={heading} avatar={avatar} last={i + 1 === length}>{children}</Item>
-            </li>
-          )
-        })}
-      </ul>
-    </Card>
+            return (
+              <li key={`${i} ${heading}`}>
+                <Item heading={heading} avatar={avatar} last={i + 1 === length}>{children}</Item>
+              </li>
+            )
+          })}
+        </ul>
+      </Card>
+    </>
   )
 }
 

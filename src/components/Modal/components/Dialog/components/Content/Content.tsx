@@ -1,10 +1,14 @@
-import type { FC } from 'react'
+import type { FC, ReactNode } from 'react'
 import styles from './Content.module.css'
 
-const Content: FC = () => (
+interface Props {
+  content?: ReactNode
+}
+
+const Content: FC<Props> = ({ content = undefined }) => (
   <article className={styles.content}>
-    <div>
-      Content
+    <div className={styles.content__inner}>
+      {content}
     </div>
   </article>
 )

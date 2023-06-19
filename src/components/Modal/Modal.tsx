@@ -1,10 +1,15 @@
-import type { FC } from 'react'
+import type { FC, ReactNode } from 'react'
 import Dialog from './components/Dialog'
 import styles from './Modal.module.css'
 
-const Modal: FC = () => (
+interface Props {
+  content?: ReactNode
+  aside?: ReactNode
+}
+
+const Modal: FC<Props> = ({ content = undefined, aside = undefined }) => (
   <div className={styles.modal}>
-    <Dialog />
+    <Dialog content={content} aside={aside} />
   </div>
 )
 

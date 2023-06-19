@@ -27,7 +27,7 @@ const CardPage: FC = () => (
             {
               heading: "Security",
               children: (
-                <p className="text-[var(--charcoal-300)]">Secures your environment</p>
+                <p>Secures your environment</p>
               ),
               avatar: {
                 color: "#F1EFFF",
@@ -37,7 +37,7 @@ const CardPage: FC = () => (
             {
               heading: "Super flexible",
               children: (
-                <p className="text-[var(--charcoal-300)]">Generate and update workflow on the go</p>
+                <p>Generate and update workflow on the go</p>
               ),
               avatar: {
                 color: "#F1EFFF",
@@ -47,7 +47,7 @@ const CardPage: FC = () => (
             {
               heading: "Unlimited scalability",
               children: (
-                <p className="text-[var(--charcoal-300)]">Scale as much, or little, as you need</p>
+                <p>Scale as much, or little, as you need</p>
               ),
               avatar: {
                 color: "#F1EFFF",

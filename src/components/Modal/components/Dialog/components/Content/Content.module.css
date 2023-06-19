@@ -1,4 +1,6 @@
 .content {
+  align-items: center;
+  display: flex;
   padding: 16px;
 }
 
@@ -7,4 +9,8 @@
     overflow-y: auto;
     padding: 32px;
   }
+}
+
+.content__inner {
+  flex-basis: 100%;
 }
