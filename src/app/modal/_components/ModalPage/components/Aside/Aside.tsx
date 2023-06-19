@@ -4,6 +4,7 @@ import { type FC, useContext } from 'react'
 import widgetItems from '@/app/modal/_data/widgetItems'
 import ModalContext from '@/app/modal/_components/ModalPage/ModalContext'
 import Widget from '@/components/Widget'
+import filterItems from './filterItems'
 
 const Aside: FC = () => {
   const { step, formData: { goals, role } } = useContext(ModalContext)
@@ -17,14 +18,17 @@ const Aside: FC = () => {
       )}
       {role && (
         <li className="mb-6">
-          <Widget heading={widgetItems.roles.heading} items={widgetItems.roles.items} />
+          <Widget 
+            heading={widgetItems.roles.heading}
+            items={filterItems(widgetItems.roles.items, role)}
+          />
         </li>
       )}
       {goals && (
         <li className="mb-6">
           <Widget
             heading={widgetItems.features.heading}
-            items={widgetItems.features.items}
+            items={filterItems(widgetItems.features.items, goals)}
           />
         </li>  
       )}

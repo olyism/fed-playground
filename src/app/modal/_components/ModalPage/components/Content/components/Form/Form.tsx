@@ -32,8 +32,6 @@ const Form: FC = () => {
     })
   }
 
-  console.log(formData)
-
   return (
     <div>
       <Controller

@@ -1,1 +1,1 @@
-export { default } from './Widget'
+export { default, type Props } from './Widget'

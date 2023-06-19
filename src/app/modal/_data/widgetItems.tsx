@@ -1,6 +1,11 @@
 import { ArrowsPointingInIcon, CurrencyDollarIcon, LifebuoyIcon, ShieldCheckIcon } from '@heroicons/react/20/solid'
 import Image from 'next/image'
+import { WidgetItemProps } from '@/components/Widget/components/Item'
 import Blockquote from '@/components/Blockquote'
+
+export type WidgetItemsData = WidgetItemProps & {
+  value?: string,
+}
 
 const widgetItems = {
   welcome: {
@@ -61,6 +66,7 @@ const widgetItems = {
     heading: "Built for folks like you",
     items: [
       {
+        value: 'creator',
         heading: "Jane Citizen • Creator Inc",
         avatar: {
           color: '#FFEDF9',
@@ -72,6 +78,7 @@ const widgetItems = {
         ),
       },
       {
+        value: 'platformer',
         heading: "Peter Pan • Platform Pty Ltd",
         avatar: {
           color: '#FFEDF9',
@@ -83,6 +90,7 @@ const widgetItems = {
         ),
       },
       {
+        value: 'architect',
         heading: "Ann Smith • AA Architect",
         avatar: {
           color: '#FFEDF9',
@@ -94,6 +102,7 @@ const widgetItems = {
         ),
       },
       {
+        value: 'consumer',
         heading: "Connor Summers • Consumer Watch",
         avatar: {
           color: '#FFEDF9',
@@ -105,6 +114,7 @@ const widgetItems = {
         ),
       },
       {
+        value: 'quality assurance',
         heading: "Mr Kwan • Quantum Leap Inc",
         avatar: {
           color: '#FFEDF9',

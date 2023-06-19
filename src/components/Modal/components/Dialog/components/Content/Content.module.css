@@ -12,5 +12,28 @@
 }
 
 .content__inner {
+  animation-name: fadeIn, slideIn;
+  animation-duration: var(--transition-speed-slow), var(--transition-speed-normal);
+  animation-iteration-count: 1;
   flex-basis: 100%;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    margin-top: -48px;
+  }
+
+  to {
+    margin-top: 0;
+  }
 }

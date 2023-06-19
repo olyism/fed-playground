@@ -1,17 +1,15 @@
 import type { FC } from 'react'
 import Card from '@/components/Card'
-import Item, { type WidgetItemProps } from './_components/Item'
+import Item, { type WidgetItemProps } from './components/Item'
 import styles from './Widget.module.css'
 
-interface Props {
+export interface Props {
   heading?: string
-  items: WidgetItemProps[]
+  items: WidgetItemProps[] | undefined
 }
 
-const Widget: FC<Props> = ({ heading, items }) => {
-  const { length } = items
-
-  return (
+const Widget: FC<Props> = ({ heading = undefined, items }) => {
+  return items?.length ? (
     <>
       {heading && <div className={styles.widget__heading}>{heading}</div>}
       <Card className={styles.widget}>
@@ -21,14 +19,14 @@ const Widget: FC<Props> = ({ heading, items }) => {
 
             return (
               <li key={`${i} ${heading}`}>
-                <Item heading={heading} avatar={avatar} last={i + 1 === length}>{children}</Item>
+                <Item heading={heading} avatar={avatar} last={i + 1 === items.length}>{children}</Item>
               </li>
             )
           })}
         </ul>
       </Card>
     </>
-  )
+  ) : null
 }
 
 export default Widget
