@@ -5,4 +5,6 @@ export { SwitchType } from './SwitchType'
 export { type Props as SwitchInputProps } from './components/Input'
 export { type Props as SwitchOtherProps } from './components/Other'
 
-export default { Input, Other }
+const SwitchBase = { Input, Other }
+
+export default SwitchBase

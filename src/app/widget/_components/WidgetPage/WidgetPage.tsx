@@ -12,7 +12,7 @@ const CardPage: FC = () => (
             {
               heading: "Welcome, friend 👋",
               children: (
-                <p>Let's personalize your Buildkite experience</p>
+                <p>Let&apos;s personalize your Buildkite experience</p>
               ),
               avatar: {
                 color: "#DDFFFA",

@@ -15,6 +15,7 @@ type FormValues = {
 const Form: FC = () => {
   const { step, formData, onSetStep, onChange } = useContext(ModalContext)
   const { name, type, inputValues } = forms[step]
+  // @ts-expect-error
   const currentFormData = formData[name]
 
   const { control } = useForm<FormValues>({
