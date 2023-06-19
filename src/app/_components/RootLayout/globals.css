@@ -103,5 +103,6 @@
     --transition-speed-slower: 1.6s;
 
     --z-index-modal: 30;
+    --z-index-animation: 40;
   }
 }

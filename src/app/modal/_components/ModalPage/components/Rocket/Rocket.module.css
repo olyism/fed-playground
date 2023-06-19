@@ -1,0 +1,24 @@
+.rocket {
+  animation-name: flyIn;
+  animation-duration: var(--transition-speed-slow);
+  animation-iteration-count: 1;
+  bottom: 0;
+  font-size: 120px;
+  left: 0;
+  line-height: 1;
+  opacity: 0;
+  position: fixed;
+  z-index: var(--z-index-animation);
+}
+
+@keyframes flyIn {
+  from {
+    opacity: 0.5;
+  }
+
+  to {
+    bottom: 100%;
+    left: 100%;
+    opacity: 1;
+  }
+}
