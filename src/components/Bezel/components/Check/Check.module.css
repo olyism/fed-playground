@@ -1,0 +1,26 @@
+.check {
+  padding: 1px;
+}
+
+.check__mark {
+  border: 1px solid var(--gray-500);
+  border-radius: 4px;
+  height: 18px;
+  padding: 4px;
+  transition: border-color var(--transition-speed-normal);
+  width: 18px;
+}
+
+.check__mark--unchecked {
+  background-color: var(--base-0);
+  border-color: var(--gray-500);
+}
+
+.check__mark--checked {
+  background-color: var(--purple-600);
+  border-color: var(--purple-600);
+}
+
+.check__mark--radio {
+  border-radius: 100%;
+}

@@ -1,0 +1,31 @@
+.widget {
+  animation-name: fadeIn, slideIn;
+  animation-duration: var(--transition-speed-slow), var(--transition-speed-normal);
+  animation-iteration-count: 1;
+}
+
+.widget__heading {
+  font-size: 18px;
+  line-height: 26px;
+  margin-bottom: 8px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    margin-top: -8px;
+  }
+
+  to {
+    margin-top: 0;
+  }
+}

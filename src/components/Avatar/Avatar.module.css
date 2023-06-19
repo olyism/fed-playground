@@ -1,0 +1,35 @@
+.avatar {
+  align-items: center;
+  justify-content: center;
+  background-color: var(--gray-100);
+  border-radius: 4px;
+  display: inline-flex;
+  height: 40px;
+  overflow: hidden;
+  width: 40px;
+}
+
+.avatar--is-circle {
+  border-radius: 100%;
+}
+
+.avatar--xs {
+  height: 26px;
+  width: 26px;
+}
+
+.avatar--sm {
+  height: 32px;
+  width: 32px;
+}
+
+.avatar--lg {
+  border-radius: 8px;
+  height: 48px;
+  width: 48px;
+}
+
+.avatar--xl {
+  height: 100px;
+  width: 100px;
+}
