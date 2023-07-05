@@ -28,8 +28,9 @@ const ModalPage: FC = () => {
       onChange: (data) => setFormData({ ...formData, ...data }),
       onLaunch: () => setLaunch(!launch)
     }}>
-      <Modal content={<Content />} aside={<Aside />} />
-      {launch && <Rocket />}
+      <Modal content={<Content />} aside={<Aside />}>
+        {launch && <Rocket />}
+      </Modal>
     </ModalContext.Provider>
   )
 }
