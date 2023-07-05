@@ -5,11 +5,14 @@ import styles from './Modal.module.css'
 interface Props {
   content?: ReactNode
   aside?: ReactNode
+  children?: ReactNode
 }
 
-const Modal: FC<Props> = ({ content = undefined, aside = undefined }) => (
+const Modal: FC<Props> = ({ content = undefined, aside = undefined, children = undefined }) => (
   <div className={styles.modal}>
-    <Dialog content={content} aside={aside} />
+    <Dialog content={content} aside={aside}>
+      {children}
+    </Dialog>
   </div>
 )
 

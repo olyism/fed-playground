@@ -6,12 +6,14 @@ import styles from './Dialog.module.css'
 interface Props {
   content?: ReactNode
   aside?: ReactNode
+  children?: ReactNode
 }
 
-const Dialog: FC<Props> = ({ content, aside }) => (
+const Dialog: FC<Props> = ({ content = undefined, aside = undefined, children = undefined }) => (
   <div className={styles.dialog}>
     <Content content={content} />
     <Aside aside={aside} />
+    {children}
   </div>
 )
 

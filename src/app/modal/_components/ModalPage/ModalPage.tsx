@@ -1,6 +1,7 @@
 'use client'
 
-import { type FC, useState } from 'react'
+import { type FC, useEffect, useState } from 'react'
+import { useRouter } from 'next/navigation'
 import { defaultFormData } from '../../_data/forms'
 import Modal from '@/components/Modal'
 import Content from './components/Content'
@@ -19,6 +20,19 @@ const ModalPage: FC = () => {
   const [ formData, setFormData ] = useState<FormData>(defaultFormData)
   const [ launch, setLaunch ] = useState<boolean>(false)
 
+  const router = useRouter()
+
+  useEffect(() => {
+    if (launch) {
+      const delay = 3000
+      const timer = setTimeout(() => {
+        router.push('/')
+      }, delay)
+
+      return () => clearTimeout(timer)
+    }
+  }, [ launch ])
+
   return (
     <ModalContext.Provider value={{
       ...defaultValue,
@@ -28,8 +42,9 @@ const ModalPage: FC = () => {
       onChange: (data) => setFormData({ ...formData, ...data }),
       onLaunch: () => setLaunch(!launch)
     }}>
-      <Modal content={<Content />} aside={<Aside />} />
-      {launch && <Rocket />}
+      <Modal content={<Content />} aside={<Aside />}>
+        {launch && <Rocket />}
+      </Modal>
     </ModalContext.Provider>
   )
 }

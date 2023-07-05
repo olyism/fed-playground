@@ -5,6 +5,7 @@
   max-height: 720px;
   max-width: 992px;
   overflow: hidden;
+  position: relative;
   width: 100%;
 }
 
