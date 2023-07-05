@@ -4,22 +4,19 @@ import styles from './Button.module.css'
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string
-  emojis?: [string, string?, string?]
+  hasRainbow?: boolean
 }
 
-const Button: FC<Props> = ({ children, emojis = undefined, className = undefined, ...props }) => (
+const Button: FC<Props> = ({ children, hasRainbow = false, className = undefined, ...props }) => (
   <button
     className={cn(
       styles.button, 
-      emojis && styles['button--has-emojis'], 
+      hasRainbow && styles['button--has-rainbow'], 
       className
     )}
     {...props}
   >
     {children}
-    {emojis && [ ...emojis ].splice(0, 3).map((emoji, i) => (
-      <span className={cn(styles.button__emoji, styles[`button__emoji--${i}`])} key={`${i}-${emoji}`}>{emoji}</span>
-    ))}
   </button>
 )
 

@@ -18,8 +18,8 @@ const Content: FC = () => {
       <p className={styles['content__paragraph']}>You&apos;ll have it up and running in 5 minutes.</p>
       <Button
         className="mt-6"
-        emojis={['']}
         onClick={() => onLaunch()}
+        hasRainbow
       >
         Create your project
       </Button>
