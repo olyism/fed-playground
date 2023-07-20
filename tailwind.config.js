@@ -6,9 +6,11 @@ module.exports = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    colors: {
-      'white': '#ffffff',
-      'alias-base': 'var(--charcoal-700)',
+    extend: {
+      colors: {
+        'white': '#ffffff',
+        'alias-base': 'var(--charcoal-700)',
+      },
     },
   },
   plugins: [],

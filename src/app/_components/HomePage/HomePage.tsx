@@ -12,6 +12,7 @@ const HomePage: FC = () => (
           <li><Link href="/radio">Radio</Link></li>
           <li><Link href="/widget">Widget</Link></li>
           <li><Link href="/modal">Modal</Link></li>
+          <li><Link href="/zxcvbn">zxcvbn</Link></li>
         </ul>
       </nav>
     </Container>
