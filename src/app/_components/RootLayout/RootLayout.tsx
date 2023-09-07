@@ -1,4 +1,5 @@
 import type { FC, ReactNode } from 'react'
+import { Analytics } from '@vercel/analytics/react';
 import './globals.css'
 
 export const metadata = {
@@ -16,6 +17,7 @@ const RootLayout: FC<Props> = ({ children }) => (
       <main>
         {children}
       </main>
+      <Analytics />
     </body>
   </html>
 )
